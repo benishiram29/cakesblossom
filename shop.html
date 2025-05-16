@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop | Cake Blossom</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Cake Blossom 🍰</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cakes.html">Our Cakes</a>
+        <a href="shop.html" style="color: pink;">Shop</a>
+        <a href="track.html">Order Tracking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="shop-body">
+
+        <section class="section">
+            <h2>Our Cakes Price Range</h2>
+            <div class="products">
+
+                <div class="product">
+                    <img src="1 pond.jpeg" alt="1 Pond Cake" />
+                    <h3>1 Pond Cakes</h3>
+                    <p>1 Pound (2 layers): Rs. 1500</p>
+                </div>
+
+                <div class="product">
+                    <img src="2 pond.jpeg" alt="2 Pond Cake" />
+                    <h3>2 Pond Cakes</h3>
+                    <p>2 Pound (2 layers): Rs. 2500</p>
+                </div>
+
+                <div class="product">
+                    <img src="3 pond.jpeg" alt="3 Pond Cake" />
+                    <h3>3 Pond Cakes</h3>
+                    <p>3 Pound (2 layers): Rs. 3500</p>
+                </div>
+
+                <div class="product">
+                    <img src="layers.jpeg" alt="extra layers" />
+                    <h3>Extra Layers Price</h3>
+                    <p>Extra Layer Price: 300</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Customize Your Cake</h2>
+
+            <form id="cakeOrderForm">
+
+                <!-- 🍰 Cake Info -->
+                <div class="form-box">
+                    <h3>Cake Details</h3>
+
+                    <label>Choose Cake Flavor:</label>
+                    <select name="flavor" required>
+                        <option value="">--Select--</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="red velvet">Red Velvet</option>
+                    </select>
+
+                    <label>Choose Size:</label>
+                    <select name="size" id="sizeSelect" required>
+                        <option value="">--Select--</option>
+                        <option value="1 pound">1 Pound</option>
+                        <option value="2 pound">2 Pound</option>
+                        <option value="3 pound">3 Pound</option>
+                    </select>
+
+                    <label>Number of Layers:</label>
+                    <input type="number" name="layers" min="1" max="5" required>
+
+                    <label>Theme of Cake:</label>
+                    <input type="text" name="theme" placeholder="e.g. Floral, Cartoon, Minimalist" required>
+
+                    <label>Upload Reference Picture (optional):</label>
+                    <input type="file" name="referenceImage" id="referenceImage" accept="image/*">
+                    <img id="previewImage" style="max-width: 200px; margin-top: 10px; display: none;" />
+
+                    <label>Message on Cake:</label>
+                    <input type="text" name="message" maxlength="40">
+
+                    <label>Delivery Date:</label>
+                    <input type="date" name="delivery" required>
+
+                    <label>Delivery Time:</label>
+                    <input type="time" name="deliveryTime" required>
+                </div>
+
+                <!-- 👤 Customer Info -->
+                <div class="form-box">
+                    <h3>Customer Info & Payment</h3>
+
+                    <label>Full Name:</label>
+                    <input type="text" name="name" required>
+
+                    <label>Phone Number:</label>
+                    <input type="tel" name="phone" pattern="[0-9]{11}" placeholder="03xxxxxxxxx" required>
+
+                    <label>Email Address:</label>
+                    <input type="email" name="email" required>
+
+                    <label>Delivery Address:</label>
+                    <textarea name="address" rows="3" placeholder="Street, City, Area" required></textarea>
+
+                    <label>Select Payment Method:</label>
+                    <select name="paymentMethod" required>
+                        <option value="">--Select--</option>
+                        <option value="cashOnDelivery">Cash on Delivery</option>
+                        <option value="easypaisa">Easypaisa</option>
+                        <option value="bankTransfer">Bank Transfer</option>
+                    </select>
+
+                    <!-- 💰 Bill Summary -->
+                    <div class="form-box" id="bill-summary-box">
+                        <h3>Bill Summary</h3>
+                        <p><strong>Cake Base Price:</strong> Rs. <span id="basePrice">0</span></p>
+                        <p><strong>Layers Charge:</strong> Rs. <span id="layerPrice">0</span></p>
+                        <p><strong>Total:</strong> Rs. <span id="totalPrice">0</span></p>
+                    </div>
+
+
+                    <input type="checkbox" required> I agree to the <a href="#">terms and conditions</a>.
+
+                    <br><br>
+                    <button type="submit" class="btn">Place Order</button>
+                </div>
+
+            </form>
+
+            <p id="confirmationMessage" style="color:rgb(192, 86, 144); margin-top:10px;"></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Cake Blossom. All rights reserved.</p>
+    </footer>
+
+    <script src="Index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  background: #ffc0cb;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+nav {
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('bg.jpg') no-repeat center/cover;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  background: rgba(255, 192, 203, 0.6);
+  padding: 10px;
+}
+
+.btn {
+  background: white;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ffd1dc;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff0f5;
+}
+
+.product img {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cakes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.cake-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cake-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(123, 77, 255, 0.3);
+}
+
+.cake-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cake-info {
+  padding: 15px;
+}
+
+.cake-info h3 {
+  margin: 0 0 10px;
+  color: #7b4dff;
+}
+
+.cake-info p {
+  margin: 0 0 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.cake-info .price {
+  font-weight: bold;
+  color: #4a2c83;
+  font-size: 16px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #f1f1f1;
+}
+
+
+.shop-body {
+  background: linear-gradient(to bottom right, #ffffff, #ffc0cb);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form select,
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+  /* only textarea will resize vertically */
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-box h3 {
+  margin-top: 0;
+  color: #ff69b4;
+  font-size: 20px;
+}
+
+.form-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#bill-summary-box {
+  background: #fff0f6;
+  border: 1px solid #ffb6d5;
+}
+
+.btn {
+  background-color: #ff69b4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ff69b4;
+}
+
+.sections {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #6a1b4d;
+}
+
+#chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff0f5;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ff69b4;
+  border-radius: 8px;
+  display: none;
+}
+
+footer {
+  background: #ffc0cb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Cake Blossom</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Cake Blossom 🍰</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cakes.html">Our Cakes</a>
+        <a href="shop.html">Shop</a>
+        <a href="track.html">Order Tracking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" style="color: pink;">Contact</a>
+    </nav>
+
+    <section class="section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required><br><br>
+            <input type="email" placeholder="Email" required><br><br>
+            <textarea placeholder="Message" rows="4" required></textarea><br><br>
+            <button class="btn" type="submit">Send</button>
+        </form>
+        <br>
+    </section>
+
+    <!-- Live Chat Button -->
+    <div id="livechat" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <button onclick="toggleChat()"
+            style="background: #ff69b4; color: white; border: none; padding: 12px 20px; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer;">💬
+            Chat with us</button>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chatBox"
+        style="display: none; position: fixed; bottom: 80px; right: 20px; width: 300px; background: #fff0f5; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); padding: 15px; z-index: 1000;">
+        <h4 style="margin: 0 0 10px;">Cake Blossom Support</h4>
+        <div id="chatArea"
+            style="height: 150px; overflow-y: auto; background: #ffffff; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+            <p><strong>Support:</strong> Hello! How can we help you? 😊</p>
+        </div>
+        <input type="text" id="userMessage" placeholder="Type your message..." style="width: 100%; padding: 8px;">
+    </div>
+
+    <!-- Chat Script -->
+    <script>
+        function toggleChat() {
+            const box = document.getElementById("chatBox");
+            box.style.display = box.style.display === "none" ? "block" : "none";
+        }
+
+        document.getElementById("userMessage").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                const msg = this.value.trim();
+                if (msg) {
+                    const chatArea = document.getElementById("chatArea");
+                    const para = document.createElement("p");
+                    para.innerHTML = `<strong>You:</strong> ${msg}`;
+                    chatArea.appendChild(para);
+                    this.value = "";
+
+                    setTimeout(() => {
+                        const reply = document.createElement("p");
+                        reply.innerHTML = `<strong>Support:</strong> Thanks for your message. We'll get back to you shortly.`;
+                        chatArea.appendChild(reply);
+                    }, 1000);
+                }
+            }
+        });
+    </script>
+
+    <footer
+        style="position: fixed; bottom: 0; left: 0; width: 100%; background: #ffc0cb; color: white; text-align: center; padding: 10px 0; z-index: 999;">
+        <p>© 2025 Cake Blossom. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
